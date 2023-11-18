@@ -232,7 +232,7 @@ function PostDetails(){
         "isFav":false
     }
     let data = JSON.stringify(json);
-    const url = "http://localhost:3000/insert";
+    const url = "https://presidio-console-based-games-list-application-backend.vercel.app/insert";
     let requestPost = new XMLHttpRequest();
 
     requestPost.open('POST', url, true);
@@ -271,7 +271,7 @@ function Get(){
         document.getElementById('cardsListFav').style = "display: ";
         Seperating(this.responseText);
     }
-    request.open('GET', "http://localhost:3000/get", true);
+    request.open('GET', "https://presidio-console-based-games-list-application-backend.vercel.app/get", true);
     request.send(); 
    
 }
@@ -292,7 +292,7 @@ function Update(name, present, year){
     }
 
     let data = JSON.stringify(json);
-    const url = "http://localhost:3000/update";
+    const url = "https://presidio-console-based-games-list-application-backend.vercel.app/update";
     let requestUpdate = new XMLHttpRequest(); 
 
     requestUpdate.open('PUT', url, true);
@@ -315,7 +315,7 @@ function Delete(name, year){
     }
 
     let data = JSON.stringify(json);
-    const url = "http://localhost:3000/del";
+    const url = "https://presidio-console-based-games-list-application-backend.vercel.app/del";
     let requestDelete = new XMLHttpRequest(); 
 
     requestDelete.open('DELETE', url, true);
