@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body onload="Get()">
+        
+        <div class="header">
+            <a href="#default" class="logo">Gameing Lists</a>
+            <div class="header-right">
+              <a href="#gameList">Home</a>
+              <a href="#favLists">Favorites</a>
+             
+            </div>
+            <div class="wrapper">
+                <div class="search_box">
+                    <div class="search_btn"><i class="material-icons">
+                        search
+                    </i></div>
+                    <input type="text" id="filter" class="input_search" placeholder="What are you looking for?" onkeyup="Search()">
+                    <div class="dropdown" >
+                        <select id="ChooseFilter" onclick="Options()">
+                            <option value="name">Name</option>
+                            <option value="year">Year </option>
+                            <option value="genre">Genre </option>
+                            <option value="age">Age </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section class="section" id="gameList">
+
+            <h3>Game Lists</h3> 
+            <button class="AddButton" id="addButton"><i class="material-icons">
+                add
+            </i></button>
+
+            <div id="NewGameModel" class="popup">
+                <div class="NewGameContent" >
+                    <div class="GameHeader">
+                        <span class="close">&times;</span>
+                        <h5>Enter details</h5>
+                    </div>
+                    <div class="GameBody">
+                        <input id="Name" class="input" placeholder="Enter Name" type="text">
+                        <input id="Price" class="input" placeholder="Enter Price" type="text">
+                        <input id="Year" class="input" placeholder="Set Year" type="text">
+                        <input id="Genre" class="input" placeholder="Set Genre" type="text">
+                        <input id="Eligibility" class="input" placeholder="Set Eligibility" type="text">
+                        <input id="Size" class="input" placeholder="Enter Size" type="text">
+                        <textarea id="Description" class="input" rows="7" cols="7" >Hello</textarea>
+                        <input id="Trailer" class="input" placeholder="Enter Trailer Video Link" type="text">
+                        <button class="submitButton" id="SubmitButton" onclick="PostDetails()">Submit</button>
+
+                        <div class="img" >
+                            <img src="image.png" width="450" height="450">
+                        </div>
+                    </div>
+
+                    <div class="GameFooter">
+                        <h5>Note: Only Video format is supported</h5>
+                    </div>
+                </div>
+            </div>
+            <div id="notFoundInitial" class="notFoundInitialClass">
+                No games saved!
+            </div>
+    
+            <div id="row" >
+                <div id="cardsList" class="ListOfCards"></div>
+            </div>
+        </section>
+
+        <section class="section" id="favLists">
+            <h3>Favorites</h3>
+            <div id="notFoundFav" class="notFoundFavClass">
+                No games saved!
+            </div>
+
+            <div id="row" >
+                <div id="cardsListFav" class="ListOfCards"></div>
+            </div>
+        </section>
+        
+        <script src="backend.js"></script>
+       
+        
+    </body>
+</html>
