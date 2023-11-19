@@ -32,3 +32,8 @@ Here by use provided trailer url's hosted on Google drive's to experience the ou
 
 
 To see live output: https://arun-s01.github.io/Presidio-Console-Based-Games-List-Frontend.github.io/ 
+
+# Directions To Use
+1. Click on Plus (+) icon to add games with the above sample data
+2. To add games to favourites click on heart icon to add the specific game to fav list
+3. To delete games just click on delete button
