@@ -210,7 +210,7 @@ window.onclick = function (e) {
 
 // Insert
 function PostDetails() {
-    document.getElementById("SubmitButton").disabled = true;
+    
     let name = document.getElementById("Name").value;
     let price = document.getElementById("Price").value;
     let year = document.getElementById("Year").value;
@@ -220,39 +220,50 @@ function PostDetails() {
     let size = document.getElementById("Size").value;
     let description = document.getElementById("Description").value;
 
-    var json = {
-        "name": name,
-        "price": price,
-        "year": year,
-        "eligibility": eligibility,
-        "genre": genre,
-        "trailer": trailer,
-        "size": size,
-        "description": description,
-        "isFav": false
-    }
-    let data = JSON.stringify(json);
-    const url = "https://presidio-console-based-games-list-application-backend.vercel.app/insert";
-    let requestPost = new XMLHttpRequest();
+    if((name == null || name == "") || (price == null || price == "") 
+        || (year == null || year == "") || (eligibility == null || eligibility == "") 
+        || (genre == null || genre == "") || (trailer == null || trailer == "") 
+        || (size == null || size == "") || (description == null || description == "")){
 
-    requestPost.open('POST', url, true);
-    requestPost.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
-    requestPost.send(data);
-    requestPost.onload = function () {
-        if (requestPost.status === 200) {
-            alert("Data posted successfully!");
-            document.getElementById("Name").value = "";
-            document.getElementById("Price").value = "";
-            document.getElementById("Year").value = "";
-            document.getElementById("Eligibility").value = "";
-            document.getElementById("Genre").value = "";
-            document.getElementById("Trailer").value = "";
-            document.getElementById("Size").value = "";
-            document.getElementById("Description").value = "";
-            document.getElementById("SubmitButton").disabled = false;
-            Get();
+            alert("Please Fill In All Required Fields");
+    }
+    else{
+        document.getElementById("SubmitButton").disabled = true;
+        var json = {
+            "name": name,
+            "price": price,
+            "year": year,
+            "eligibility": eligibility,
+            "genre": genre,
+            "trailer": trailer,
+            "size": size,
+            "description": description,
+            "isFav": false
+        }
+        let data = JSON.stringify(json);
+        const url = "https://presidio-console-based-games-list-application-backend.vercel.app/insert";
+        let requestPost = new XMLHttpRequest();
+    
+        requestPost.open('POST', url, true);
+        requestPost.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
+        requestPost.send(data);
+        requestPost.onload = function () {
+            if (requestPost.status === 200) {
+                alert("Data posted successfully!");
+                document.getElementById("Name").value = "";
+                document.getElementById("Price").value = "";
+                document.getElementById("Year").value = "";
+                document.getElementById("Eligibility").value = "";
+                document.getElementById("Genre").value = "";
+                document.getElementById("Trailer").value = "";
+                document.getElementById("Size").value = "";
+                document.getElementById("Description").value = "";
+                document.getElementById("SubmitButton").disabled = false;
+                Get();
+            }
         }
     }
+    
 }
 
 // Get
