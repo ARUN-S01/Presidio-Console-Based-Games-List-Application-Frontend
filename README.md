@@ -40,3 +40,5 @@ To see live output: https://arun-s01.github.io/Presidio-Console-Based-Games-List
 4. Hover the cursor on the trailer inside the cards to play
 5. To search by filters, click on the filter's section near search and enter the query
 
+## Thank You
+
