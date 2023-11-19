@@ -13,3 +13,5 @@ git clone <repo name>
 ## Usage
 1. To make edits, open the HTML index file in any text editor. 
 2. To view the changes, simply open the file in a web browser.
+
+To see live output: https://arun-s01.github.io/Presidio-Console-Based-Games-List-Frontend.github.io/ 
