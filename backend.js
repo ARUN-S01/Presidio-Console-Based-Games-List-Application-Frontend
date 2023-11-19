@@ -137,7 +137,7 @@ function favCardCreation() {
 
 
 //Drop Down
-let DropdownValue = "";
+let DropdownValue = "name";
 function Options() {
     element = document.querySelector("#ChooseFilter");
     output = element.value;
