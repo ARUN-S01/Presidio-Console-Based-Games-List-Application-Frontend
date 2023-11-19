@@ -37,6 +37,7 @@ function Seperating(api) {
 
     initialCardCreation();
     favCardCreation();
+    
 }
 
 // Intial or Main Page Card Creation (Dynamic)
@@ -268,6 +269,7 @@ function PostDetails() {
 
 // Get
 function Get() {
+    AmagiLoader.show();
     document.getElementById("cardsList").innerHTML = "";
     document.getElementById("cardsListFav").innerHTML = "";
     
@@ -277,8 +279,12 @@ function Get() {
         favContent = []
         initialContent = []
         JsonValue = []
-
+        
         Seperating(this.responseText);
+        setTimeout(() => {
+            AmagiLoader.hide();
+         }, 3000);
+        
     }
     request.open('GET', "https://presidio-console-based-games-list-application-backend.vercel.app/get", true);
     request.send();
