@@ -137,14 +137,7 @@ video {
 /* -- Video Section Ends -- */
 
 /* -- Search Box Section Starts -- */
-/* .search_box {
-  background: #bccbde;
-  position: relative;
-  padding: 10px;
-  border-radius: 50px;
-  display: inline-flex;
-  justify-self: flex-end;
-} */
+
 .search_box{
   
   height: fit-content;
