@@ -14,4 +14,21 @@ git clone <repo name>
 1. To make edits, open the HTML index file in any text editor. 
 2. To view the changes, simply open the file in a web browser.
 
+## Sample Data's 
+Here by use provided trailer url's hosted on Google drive's to experience the output of the application (Only hosted video's supported)
+1. Call of Duty Mordern Warefare 3 - https://t.ly/N0uL4
+2. Call of Duty Mordern Warefare - https://t.ly/YpwRz
+3. Far Cry 3 - https://t.ly/r88xZ
+4. Halo - https://t.ly/c2IOp
+5. Ice Age - https://t.ly/YyuOJ
+6. Ice Age Dawn of Dino - https://t.ly/Ar_88
+7. Minecraft - https://t.ly/XSe-C
+8. Flight Sim - https://t.ly/2XwXS
+9. Valorent - https://t.ly/7-Wak
+10. Froza Horizon - https://t.ly/qOOM4
+11. Fortnite - https://t.ly/BwtnQ
+12. Hitman 3 - https://t.ly/h0WuY
+13. Dead Space - https://t.ly/BHpky
+
+
 To see live output: https://arun-s01.github.io/Presidio-Console-Based-Games-List-Frontend.github.io/ 
