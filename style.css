@@ -1,342 +1,341 @@
 * {
-    box-sizing: border-box;
-  }
-body{
-	background: #fff5d7; /* Ragin Beige */
+  box-sizing: border-box;
+}
+
+/* -- Main UI -- */
+body {
+  background-image: radial-gradient(73% 147%, #EADFDF 59%, #ECE2DF 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.50) 47%, rgba(0, 0, 0, 0.50) 100%);
+  background-blend-mode: screen;
   font-family: 'Montserrat';
 }
+
+/* -- Header Section Start -- */
 .header {
-    overflow: hidden;
-    padding: 20px 10px;
-    border-radius: 20px;
-    background-color: #888;
-  }
-  
-  .header a {
-    float: left;
-    color: black;
-    text-align: center;
-    padding: 12px;
-    text-decoration: none;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 4px;
-  }
-  
-  .header a.logo {
-    font-size: 25px;
-    font-weight: bold;
-  }
-  
-    .header a.active {
-    background-color: #0e0fed;
-    color: white;
-  }
-  
-  .header-right {
-    float: right;
-  }
-  
-/* Card */
-.topIcon{
-  
+  overflow: hidden;
+  padding: 20px;
+  border-radius: 20px;
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a.active {
+  background-color: #0e0fed;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+/* -- Header Section End -- */
+
+/* -- Card Section Starts -- */
+.topIcon {
+
   position: relative;
   margin-top: -20px;
-  
   margin-left: 580px;
-
 }
-.topIcon img{
+
+.topIcon img {
   background-color: #888;
 }
-  .column{
-    float: left;
-    width: 30%;
-  }
 
-  
-  .row::after{
-    content: "";
-    display: table;
-    clear: both;
-  }
-  .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 8px;
-    border-radius: 30px;
-    margin: 15px;
-    
-    background-color: #bccbde;
-  }
-  .card h4{
-    text-align-last: left;
-    margin-left: 20px;
-    font-size: 20px;
+.column {
+  display: inline-block;
+  width: 30%;
 
-  }
-  .card p{
-    margin-left: 20px;
-  }
-  
-  .card .CardBottom{
-    background-color: #fff5d7;
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;    
-   
-  }
-
-  .card .CardBottom h5{
-    font-size: 12px;
-    margin-left: 15px;
-  }
-  .card .CardBottom .combine{
-    
-    background-color:  #fea49f;
-    border-radius: 30px;
-    height: 40px;
-    width: 90px;
-    padding: 8px;
-    display: flex;
-	  justify-content: center;
-	  align-items: center;
-    margin-left: 10px;
-    margin-top: 5px;
-  }
-  .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-  }
-  
-  
-@media screen and (max-width: 600px) {
-    .column{
-        width: 100%;
-        display: table;
-        margin-bottom: 20px;
-    }
-    .header a {
-        float: none;
-        display: block;
-        text-align: left;
-      }
-      .header-right {
-        float: none;
-      }
 }
 
-/* Video */
-@media (min-aspect-ratio: 16/9) {
-    video {
-    border-radius: 30px;
-      width: 100%;
-      height: auto;
-    }
-  }
-  @media (max-aspect-ratio: 16/9) {
-    video {
-        border-radius: 30px;
-      width: auto;
-      height: 100%;
-    }
-  }
+.row::after {
 
-/* Search Box */
-.wrapper{
-	
-	justify-content: center;
-	align-items: center;
-}
-.search_box{
-	background: #bccbde; /* Grey silver */
-	position: fixed;
-    margin-left: 30%;
-	padding: 10px;
-	border-radius: 50px;
-	display: flex;
+  display: table;
+  clear: both;
 }
 
-.search_box .search_btn{
-	width: 35px;
-	height: 35px;
-	border-radius: 50%;
-	background: #c2dde6; /* Lightsaber Blue */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	margin-right: 15px;
-	cursor: pointer;
+.card {
+  height: fit-content;
+  width: fit-content;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 30px;
+  margin: 10px;
+
+  background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
 }
 
-.search_box .input_search{
-	outline: none;
-	border: 0;
-	background: #c2dde6; /* Lightsaber Blue */
-	border-radius: 50px;
-	padding: 15px 20px;
-	width: 200px; 
-	height: 35px;
-	color: #fff;
+.card h4 {
+  text-align-last: left;
+  margin-left: 20px;
+  font-size: 20px;
+
 }
 
-/* Drop Down */
-
-.dropdown{
-   
-    
-	align-items: center;
-    direction: ltr;
+.card p {
+  margin-left: 20px;
 }
-.dropdown select{
-    width: 100px;
-	height: 35px;
-	border-radius: 50px;
-	background: #c2dde6; /* Lightsaber Blue */
-	display: flex;
-	text-align-last: center;
-    direction: ltr;
-	color: #fff;
-	margin-right: 8px;
-    margin-left: 15px;
-    border: 0;
-    -webkit-appearance: none;
+
+.card .CardBottom {
+  padding: 10px;
+  background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255, 255, 255, 0.30) 0%, rgba(0, 0, 0, 0.30) 100%);
+  background-blend-mode: screen;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.card .CardBottom h5 {
+  font-size: 12px;
+  margin-left: 15px;
+}
+
+.card .CardBottom .combine {
+  background-image: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+  border-radius: 30px;
+  height: 40px;
+  width: 90px;
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-top: 5px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+/* -- Card Section End -- */
+
+/* -- Video Section Starts -- */
+video {
+
+  display: inline-block;
+  border-radius: 30px;
+  width: 100%;
+  height: auto;
+}
+
+/* -- Video Section Ends -- */
+
+/* -- Search Box Section Starts -- */
+.search_box {
+
+  height: fit-content;
+  width: fit-content;
+  background: #bccbde;
+  position: fixed;
+  margin-left: 30%;
+  justify-content: center;
+  justify-items: center;
+  padding: 10px;
+  border-radius: 50px;
+  display: flex;
+}
+
+.search_box .search_btn {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #c2dde6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.search_box .input_search {
+  color: #000;
+  outline: none;
+  border: 0;
+  background: #c2dde6;
+  border-radius: 50px;
+  padding: 15px 20px;
+  width: 200px;
+  height: 35px;
+}
+/* -- Search Box Section Ends -- */
+
+/* -- Drop Down Section Starts -- */
+
+.dropdown {
+  align-items: center;
+}
+
+.dropdown select {
+  width: 100px;
+  height: 35px;
+  border-radius: 50px;
+  background: #c2dde6;
+  display: flex;
+  text-align-last: center;
+  direction: ltr;
+
+  margin-right: 8px;
+  margin-left: 15px;
+  border: 0;
+  -webkit-appearance: none;
   -moz-appearance: none;
 
 }
+/* -- Drop Down Section Ends -- */
 
-/* Section */
-.section, section{
+/* -- GameList and Fav Section Starts -- */
+.section,
+section {
   display: flex;
   flex-direction: column;
 }
-.section, h3{
+
+.section,
+h3 {
   padding: 8px;
   margin-left: 10px;
 }
 
-.notFoundInitialClass{
+.notFoundInitialClass {
   margin-top: 15px;
   margin-left: 40px;
 }
-.notFoundFavClass{
+
+.notFoundFavClass {
   margin-left: 40px;
 }
-.AddButton{
+
+.AddButton {
   width: 35px;
-	height: 35px;
-	border-radius: 12px;
-	background: #c2dde6; /* Lightsaber Blue */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	border: none;
+  height: 35px;
+  border-radius: 12px;
+  background: #c2dde6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
   margin-left: 150px;
   margin-top: -55px;
-  
+
 }
 
-/* Pop Up Entry */
+/* -- GameList and Fav Section Starts -- */
 
-.popup{
-  display: none; 
+/* -- Pop Up Entry UI Starts -- */
+
+.popup {
+  display: none;
   position: fixed;
-  z-index: 1; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; 
+  width: 100%;
   height: 100%;
-  overflow: auto; 
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4); 
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
-.GameHeader{
+
+.GameHeader {
   padding: 2px 16px;
-  background-color: #12343b; /* Night Blue Shadow */
+  background-color: #12343b;
   color: white;
 }
-.GameBody{
+
+.GameBody {
   padding: 15px;
 }
-.GameBody .input{
+
+.GameBody .input {
   outline: none;
-	border: 0;
-	background: #fff5d7; /*  Ragin Beige */
-	border-radius: 50px;
-	padding: 10px;
+  border: 0;
+  background: #fff5d7;
+  border-radius: 50px;
+  padding: 10px;
   margin-top: 10px;
-	width: 300px; 
-	height: 40px;
-	color: #000;
+  width: 300px;
+  height: 40px;
+  color: #000;
   display: flex;
   justify-content: center;
   text-align: start;
 }
-.GameFooter{
+
+.GameFooter {
   padding: 2px 16px;
-  background-color: #12343b; /* Night Blue Shadow */
+  background-color: #12343b;
   color: white;
 }
-.NewGameContent{
+
+.NewGameContent {
   position: relative;
-  background-color: #c89666; /* Sand Tan Shadow */
+  background-color: #c89666;
   margin: 10px auto;
   padding: 0;
   border: 1px solid #888;
   width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   animation-name: animatetop;
   animation-duration: 0.4s
 }
-.close{
+
+.close {
   color: #aaa;
   float: right;
   font-size: 28px;
   font-weight: bold;
 }
+
 .close:hover,
 .close:focus {
   color: black;
   text-decoration: none;
   cursor: pointer;
 }
+
 @keyframes animatetop {
-  from {top: -300px; opacity: 0}
-  to {top: 0; opacity: 1}
+  from {
+    top: -300px;
+    opacity: 0
+  }
+
+  to {
+    top: 0;
+    opacity: 1
+  }
 }
 
-.submitButton{
+.submitButton {
   width: 300px;
-	height: 40px;
-	border-radius: 12px;
+  height: 40px;
+  border-radius: 12px;
   margin-top: 10px;
 
-	background: #c2dde6; /* Lightsaber Blue */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: #fff;
-	border: none;
+  background: #c2dde6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  border: none;
 }
 
-.img{
+.img {
   position: relative;
   margin-left: 400px;
   margin-top: -450px;
 }
-
-/* Loader */
-.loader {
-  border: 16px solid #f3f3f3; /* Light grey */
-  border-top: 16px solid #3498db; /* Blue */
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-}
-
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
-}
-
+/* -- Pop Up Entry UI Ends -- */

@@ -2,28 +2,30 @@
 <html>
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     </head>
+
     <body onload="Get()">
-        
+
+        <!-- Header Section Starts -->
         <div class="header">
             <a href="#default" class="logo">Gameing Lists</a>
             <div class="header-right">
-              <a href="#gameList">Home</a>
-              <a href="#favLists">Favorites</a>
-             
+                <a href="#gameList">Home</a>
+                <a href="#favLists">Favorites</a>
+
             </div>
             <div class="wrapper">
                 <div class="search_box">
                     <div class="search_btn"><i class="material-icons">
-                        search
-                    </i></div>
+                            search
+                        </i></div>
                     <input type="text" id="filter" class="input_search" placeholder="What are you looking for?" onkeyup="Search()">
-                    <div class="dropdown" >
+                    <div class="dropdown">
                         <select id="ChooseFilter" onclick="Options()">
                             <option value="name">Name</option>
                             <option value="year">Year </option>
@@ -34,16 +36,21 @@
                 </div>
             </div>
         </div>
+        <!-- Header Section Ends -->
 
+        <!-- Initial or Main Page Section (GameList) Starts -->
         <section class="section" id="gameList">
 
-            <h3>Game Lists</h3> 
-            <button class="AddButton" id="addButton"><i class="material-icons">
-                add
-            </i></button>
+            <h3>Game Lists</h3>
+            <button class="AddButton" id="addButton">
+                <i class="material-icons">
+                    add
+                </i>
+            </button>
 
+            <!-- Popup UI (Insert) Starts -->
             <div id="NewGameModel" class="popup">
-                <div class="NewGameContent" >
+                <div class="NewGameContent">
                     <div class="GameHeader">
                         <span class="close">&times;</span>
                         <h5>Enter details</h5>
@@ -55,11 +62,11 @@
                         <input id="Genre" class="input" placeholder="Set Genre" type="text">
                         <input id="Eligibility" class="input" placeholder="Set Eligibility" type="text">
                         <input id="Size" class="input" placeholder="Enter Size" type="text">
-                        <textarea id="Description" class="input" rows="7" cols="7" >Hello</textarea>
+                        <textarea id="Description" class="input" rows="7" cols="7">Hello</textarea>
                         <input id="Trailer" class="input" placeholder="Enter Trailer Video Link" type="text">
                         <button class="submitButton" id="SubmitButton" onclick="PostDetails()">Submit</button>
 
-                        <div class="img" >
+                        <div class="img">
                             <img src="image.png" width="450" height="450">
                         </div>
                     </div>
@@ -69,28 +76,33 @@
                     </div>
                 </div>
             </div>
+            <!-- Popup UI (Insert) Ends -->
+
             <div id="notFoundInitial" class="notFoundInitialClass">
                 No games saved!
             </div>
-    
-            <div id="row" >
+
+            <div id="row">
                 <div id="cardsList" class="ListOfCards"></div>
             </div>
         </section>
+        <!-- Initial or Main Page Section (GameList) Ends -->
 
+        <!-- Favorites Section Starts -->
         <section class="section" id="favLists">
             <h3>Favorites</h3>
             <div id="notFoundFav" class="notFoundFavClass">
                 No games saved!
             </div>
 
-            <div id="row" >
+            <div id="row">
                 <div id="cardsListFav" class="ListOfCards"></div>
             </div>
         </section>
-        
+        <!-- Favorites Section Ends -->
+
         <script src="backend.js"></script>
-       
-        
+
     </body>
+
 </html>
