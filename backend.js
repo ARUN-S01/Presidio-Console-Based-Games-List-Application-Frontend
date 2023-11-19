@@ -105,7 +105,7 @@ function favCardCreation() {
         favContent.forEach((card) => {
             const cardElement = `
                 <div class="column">
-                    <div class="card" style="background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);">
+                    <div class="card" style="background-color: #455561">
                 
                         <video src="${card.trailer}" muted="muted" class = "vid"></video>
                         <h5 class = "name">${card.name}</h4>
@@ -121,7 +121,7 @@ function favCardCreation() {
                                 <span onclick="MoveList(this)" class="toFavSection">
                                     <i class="material-icons" style="color: green;">favorite</i>
                                 </span>
-                                <span onclick="DeleteList(this)">
+                                <span onclick="DeleteList(this)" class="toFavSection">
                                     <i class="material-icons">delete</i>
                                 </span>
                             </div>
