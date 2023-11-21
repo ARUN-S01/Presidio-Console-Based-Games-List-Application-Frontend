@@ -287,6 +287,7 @@ function Get() {
         
     }
     request.open('GET', "https://presidio-console-based-games-list-application-backend.vercel.app/get", true);
+    request.setRequestHeader('Content-type', 'application/json; charset=UTF-8');
     request.send();
 }
 
